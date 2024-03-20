@@ -47,3 +47,5 @@ The optional second parameter a `config` object with options for specifying `min
 ## Motivation
 
 This simple package was initially created for and is maintained by [GameSensConverter](https://gamesensconverter.com/).
+
+The motivation for this package was to make it easy to round numbers with a large number of decimal places without needing to add unnecessary trailing zeros for numbers with fewer decimal places.
