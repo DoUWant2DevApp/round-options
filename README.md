@@ -1,9 +1,19 @@
-# TODO
+## TODO
 
 - check TODOs
 - remove commented out code
 
+# round-options
+
+round-options is a package that lets you round numbers to an exact, minimum, or maximum number of decimal places.
+
+```
+npm i round-options
+```
+
 ```javascript
+import roundOptions from "round-options"
+
 roundOptions(2) // output: "2"
 roundOptions(2, { minimumDecimals: 4 }) // output: "2.0000"
 roundOptions(2.22, { minimumDecimals: 4 }) // output: "2.2200"
@@ -25,3 +35,15 @@ roundOptions("") // output: ""
 roundOptions(word) // output: ""
 roundOptions(NaN) // output: ""
 ```
+
+## round-options parameters
+
+The roundOptions function takes one required parameter and one optional parameter. It returns a string representation of a number.
+
+A number or a string of a number is required as the first parameter in the roundOptions function. If another value is passed, the function will return an empty string.
+
+The optional second parameter a `config` object with options for specifying `minimumDecimals`, `maximumDecimals`, and/or `exactDecimals`.
+
+## Motivation
+
+This simple package was initially created for and is maintained by [GameSensConverter](https://gamesensconverter.com/).
