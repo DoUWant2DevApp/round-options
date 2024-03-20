@@ -1,7 +1,7 @@
 {
   "name": "round-options",
   "version": "0.0.0",
-  "description": "A package for rounding numbers to an exact, minimum, or maximum number of decimals.",
+  "description": "A package for rounding numbers to an exact, minimum, or maximum number of decimal places.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "repository": {
