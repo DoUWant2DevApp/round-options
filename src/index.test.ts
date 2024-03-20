@@ -119,31 +119,3 @@ test.each([...testArray, ...docsArray])("roundToLength test", (value, config, ou
   //@ts-ignore for handling invalid numbers
   expect(roundOptions(value, config).toString()).toBe(output.toString())
 })
-
-// let str = ``
-// docsArray.forEach((test) => {
-//   const [value, config, output] = test
-
-//   str =
-//     str +
-//     `roundOptions(${value}${
-//       config
-//         ? ", {" +
-//           Object.keys(config)
-//             .map((key, index) => {
-//               return `${key}: ${
-//                 // @ts-ignore
-//                 typeof config[key] === "string" ? `"` + config[key] + `"` : config[key].toString()
-//                 // @ts-ignore
-//               }${index < Object.keys(config).length - 1 ? ", " : ""}`
-//             })
-//             .join("") +
-//           "}"
-//         : ""
-//     }) // output: ${
-//       typeof roundOptions(value, config) === "string"
-//         ? `"` + roundOptions(value, config) + `"`
-//         : roundOptions(value, config)
-//     }\n`
-// })
-// console.log(str)
