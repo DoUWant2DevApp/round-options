@@ -21,6 +21,17 @@
     "postversion": "git push && git push --tags"
   },
   "author": "DoUWant2DevApp",
+  "homepage": "https://gamesensconverter.com/developers/round-options",
+  "keywords": [
+    "round",
+    "round options",
+    "decimal",
+    "decimal places",
+    "maximum decimals",
+    "minimum decimals",
+    "exact decimals",
+    "toFixed"
+  ],
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^29.5.12",
