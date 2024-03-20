@@ -1,4 +1,4 @@
-import { roundOptions, type RoundOptionsConfig } from "./index"
+import roundOptions, { type RoundOptionsConfig } from "./index"
 
 const testArray: Array<[number | string, RoundOptionsConfig | undefined, number | string]> = [
   [2, undefined, "2"],
@@ -13,7 +13,7 @@ const testArray: Array<[number | string, RoundOptionsConfig | undefined, number 
     2,
     {
       minimumDecimals: 2,
-      maxDecimals: 5,
+      maximumDecimals: 5,
     },
     "2.00",
   ],
@@ -21,7 +21,7 @@ const testArray: Array<[number | string, RoundOptionsConfig | undefined, number 
     2,
     {
       minimumDecimals: 2,
-      maxDecimals: 5,
+      maximumDecimals: 5,
       exactDecimals: 4,
     },
     "2.0000",
@@ -30,7 +30,7 @@ const testArray: Array<[number | string, RoundOptionsConfig | undefined, number 
     2.5698785,
     {
       minimumDecimals: 2,
-      maxDecimals: 5,
+      maximumDecimals: 5,
     },
     "2.56988",
   ],
@@ -38,7 +38,7 @@ const testArray: Array<[number | string, RoundOptionsConfig | undefined, number 
     2.5698725,
     {
       minimumDecimals: 2,
-      maxDecimals: 5,
+      maximumDecimals: 5,
     },
     "2.56987",
   ],
@@ -46,7 +46,7 @@ const testArray: Array<[number | string, RoundOptionsConfig | undefined, number 
     2.5698725,
     {
       minimumDecimals: 2,
-      maxDecimals: 5,
+      maximumDecimals: 5,
     },
     "2.56987",
   ],
@@ -60,28 +60,28 @@ const testArray: Array<[number | string, RoundOptionsConfig | undefined, number 
     2.5698725,
     {
       minimumDecimals: 2,
-      maxDecimals: 12,
+      maximumDecimals: 12,
     },
     "2.5698725",
   ],
   [
     2.5698725,
     {
-      maxDecimals: 12,
+      maximumDecimals: 12,
     },
     "2.5698725",
   ],
   [
     2.569872512121212121212,
     {
-      maxDecimals: 12,
+      maximumDecimals: 12,
     },
     "2.569872512121",
   ],
   [
     "2.2.2",
     {
-      maxDecimals: 12,
+      maximumDecimals: 12,
     },
     "",
   ],
@@ -92,14 +92,14 @@ const docsArray: Array<[number | string, RoundOptionsConfig | undefined, number 
   [2, { minimumDecimals: 4 }, "2.0000"],
   ["2.22", { minimumDecimals: 4 }, "2.2200"],
   [2.6666666, { minimumDecimals: 4 }, "2.6666666"],
-  [2.222266, { maxDecimals: 4 }, "2.2223"],
-  [2.222266, { maxDecimals: 8 }, "2.222266"],
+  [2.222266, { maximumDecimals: 4 }, "2.2223"],
+  [2.222266, { maximumDecimals: 8 }, "2.222266"],
   [2.2222, { exactDecimals: 7 }, "2.2222000"],
   [2.2222666, { exactDecimals: 4 }, "2.2223"],
-  [2.22222, { minimumDecimals: 4, maxDecimals: 6 }, "2.22222"],
-  ["2.22222222", { minimumDecimals: 4, maxDecimals: 6 }, "2.222222"],
-  [2.22, { minimumDecimals: 4, maxDecimals: 6 }, "2.2200"],
-  [2.22266, { minimumDecimals: 2, maxDecimals: 10, exactDecimals: 3 }, "2.223"],
+  [2.22222, { minimumDecimals: 4, maximumDecimals: 6 }, "2.22222"],
+  ["2.22222222", { minimumDecimals: 4, maximumDecimals: 6 }, "2.222222"],
+  [2.22, { minimumDecimals: 4, maximumDecimals: 6 }, "2.2200"],
+  [2.22266, { minimumDecimals: 2, maximumDecimals: 10, exactDecimals: 3 }, "2.223"],
   //@ts-ignore
   [false, undefined, ""],
   //@ts-ignore

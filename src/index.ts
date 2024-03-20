@@ -1,16 +1,19 @@
 export type RoundOptionsConfig = {
   minimumDecimals?: number
-  maxDecimals?: number
+  maximumDecimals?: number
   exactDecimals?: number
 }
 
-export function roundOptions(num: number | string, config: RoundOptionsConfig = {}): string {
+export default function roundOptions(
+  num: number | string,
+  config: RoundOptionsConfig = {},
+): string {
   if (!["string", "number"].includes(typeof num) || num === "") {
     return ""
   }
   num = Number(num)
   // Destructure with default values
-  const { minimumDecimals = 0, maxDecimals = Infinity, exactDecimals } = config
+  const { minimumDecimals = 0, maximumDecimals = Infinity, exactDecimals } = config
 
   // Check for valid finite number
   if (typeof num !== "number" || isNaN(num) || !isFinite(num)) {
@@ -22,7 +25,7 @@ export function roundOptions(num: number | string, config: RoundOptionsConfig = 
   const numberOfDecimalsInNumber = decimalPart.length
 
   let numberOfDecimalsToRound =
-    exactDecimals ?? Math.min(Math.max(numberOfDecimalsInNumber, minimumDecimals), maxDecimals)
+    exactDecimals ?? Math.min(Math.max(numberOfDecimalsInNumber, minimumDecimals), maximumDecimals)
 
   // Round the number to the determined length of decimals
   return num.toFixed(numberOfDecimalsToRound)
