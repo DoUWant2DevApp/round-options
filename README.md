@@ -1,8 +1,3 @@
-## TODO
-
-- check TODOs
-- remove commented out code
-
 # round-options
 
 round-options is a package that lets you round numbers to an exact, minimum, or maximum number of decimal places.
